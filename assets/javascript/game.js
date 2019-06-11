@@ -66,9 +66,25 @@ if (newGame) {
 	initializeScreen();
 }
 
-// get input from the user
+// get input from the user and loop until the game is over
 
 document.onkeyup = function (event) {
+	var userGuess = event.key;
+
+	if (!gameOver) {
+		if (validGuesses.includes(userGuess) && !guessedLetters.includes(userGuess)) {
+			checkGuess(userGuess);
+		}
+	} else {
+		initializeScreen();
+	}
+}
+
+
+
+
+
+function checkGuess(userGuess) {
 	if (!gameOver) {
 		var userGuess = event.key;
 		console.log("user pressed: " + userGuess);
