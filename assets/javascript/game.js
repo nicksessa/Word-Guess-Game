@@ -139,7 +139,11 @@ function updateScreen() {
 	}
 	lossCountElement.textContent = tempString;
 
-
+	if (!gameOver) {
+		instruction.textContent = "Select a-z to guess the word";
+	} else {
+		instruction.textContent = "    Hit any key to start    ";
+	}
 
 	//for (var i = 0; i < blinkElements.length; i++) {
 	//	blinkElements[i].textContent = (this.gameOver ? pressAnyKeyToReset[i] : pressAnyKeyToStart[i]);
