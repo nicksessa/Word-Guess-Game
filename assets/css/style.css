@@ -6,14 +6,15 @@ body {
 }
 
 #title {
+	margin: auto;
 	/*width: 100%;*/
 	margin-left: -80px;
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	/*margin-top: 20px;
+	margin-bottom: 30px;*/
 }
 
-#instruction-div, #alerts {
+#instruction-div, #results {
 	text-align: center;
 	font-size: 12px;
 }
@@ -45,3 +46,31 @@ body {
 	text-align: center;
 	font-size: 16px;
 }
+
+#home-div {
+	margin-left: -160px;
+	margin-top: 20px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #33FF33;
+}
+
+a:visited{
+	text-decoration: none;
+	color: #33FF33;
+	
+}
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d6ff31;
+}
+
+#title:hover {
+color: #d6ff31;
+}
+
