@@ -15,7 +15,7 @@ var guessedLetters = [];
 
 //var newGame = true;
 var gameOver = false;
-var resultLine = "                                           ";
+var resultLine = "                  ";
 
 var blinkElements = document.getElementsByClassName("blinking");
 //var resultLineElements = document.getElementsByClassName("result-line");
@@ -46,7 +46,7 @@ function initializeScreen() {
 	visibleLetters = [];
 	strikes = 0;
 	gameOver = false;
-	resultLine = "                                           ";
+	resultLine = "                    ";
 	theWord = "";
 
 	//get word from the wordList array above
@@ -186,13 +186,13 @@ function checkGuess(theLetter) {
 	if (strikes >= maxStrikes) {
 		gameOver = true;
 		losses++;
-		resultLine = "                 You Lose!                 ";
+		resultLine = "      You Lose!     ";
 	}
 	// Check to see if all the letters have been found.
 	// if visibleLetters has no false values in it, it means that you win!
 	if (!visibleLetters.includes(false)) {
 		wins++;
-		resultLine = "                  You Win!                 ";
+		resultLine = "      You Win!      ";
 		gameOver = true;
 	}
 	// we could call the function to update the screen here or back in the main function
@@ -224,5 +224,3 @@ document.onkeyup = function (event) {
 
 initializeScreen();
 updateScreen();
-
-
